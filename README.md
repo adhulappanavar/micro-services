@@ -1,4 +1,4 @@
-# micro-services
+# Micro Service Testing using Gatling
 
 Building the User Microservice Jar File
 ----------------------------------------
