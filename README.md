@@ -14,6 +14,10 @@ Running the User Microservice (JAR)
 --------------------------------------
  $ java -jar target/user-microservice-0.0.1-SNAPSHOT.jar
  
+ Test the Microservice 
+ ----------------------
+ Step 1 : Open the URL from a browser - http://localhost:9001/users
+ 
  
 Running the Gatling test using Maven
 -------------------------------------
