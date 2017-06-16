@@ -143,10 +143,9 @@ new format
  data {
   writers = "console, file, graphite"
   graphite {
-  host = "192.0.2.235"  # InfluxDB or Carbon server or 127.0.0.1
+  host = "127.0.0.1"  # InfluxDB or Carbon server
   # writeInterval = 1   # Default write interval of one second
   }
-}
 ```
 
 
