@@ -14,6 +14,9 @@ Running the User Microservice (JAR)
 --------------------------------------
  $ java -jar target/user-microservice-0.0.1-SNAPSHOT.jar
  
+ Alternatively -  You can compile and run in on go using  $ mvn -q clean spring-boot:run
+ ----------------------------------------------------------------------------------------
+ 
  Test the Microservice 
  ----------------------
  Step 1 : Open the URL from a browser - http://localhost:9001/users
