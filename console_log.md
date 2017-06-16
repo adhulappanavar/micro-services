@@ -1,12 +1,8 @@
 /*****************************************************************************
-************************************************************************
-************************************************************************
 **                     Build the JAR - mvn package              ***
-************************************************************************
-************************************************************************
 ******************************************************************************/
-
-{Sat 10 Jun 12:59} -  ~/code_p/gatling/micro-services/ecommerce-microservices/user-microservice   master  mvn package
+```
+{Sat 10 Jun 12:59} -  ~/code_p/gatling/micro-services/ecommerce-microservices/user-microservice   master  ##mvn package
 [INFO] Scanning for projects...
 [INFO]
 [INFO] ------------------------------------------------------------------------
@@ -23,7 +19,7 @@
 [INFO] Compiling 3 source files to ~/code_p/gatling/micro-services/ecommerce-microservices/user-microservice/target/classes
 
 ....
-
+```
 
 Results :
 
