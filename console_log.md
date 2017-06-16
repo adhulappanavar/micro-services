@@ -1,8 +1,9 @@
+
 /*****************************************************************************
 **                     Build the JAR - mvn package              ***
 ******************************************************************************/
 ```
-{Sat 10 Jun 12:59} -  ~/code_p/gatling/micro-services/ecommerce-microservices/user-microservice   master  ##mvn package
+{Sat 10 Jun 12:59} -  ~/code_p/gatling/micro-services/ecommerce-microservices/user-microservice   master  mvn package
 [INFO] Scanning for projects...
 [INFO]
 [INFO] ------------------------------------------------------------------------
@@ -20,7 +21,7 @@
 
 ....
 ```
-
+```
 Results :
 
 Tests run: 1, Failures: 0, Errors: 0, Skipped: 0
@@ -38,7 +39,7 @@ Tests run: 1, Failures: 0, Errors: 0, Skipped: 0
 [INFO] Final Memory: 36M/324M
 [INFO] ------------------------------------------------------------------------
 
-
+```
 
 
 
@@ -52,7 +53,7 @@ Tests run: 1, Failures: 0, Errors: 0, Skipped: 0
 ************************************************************************
 ************************************************************************
 ******************************************************************************/
-
+```
 {Sat 10 Jun 13:02} ✘ -  ~/code_p/gatling/micro-services/ecommerce-microservices/user-microservice   master  java -jar target/user-microservice-0.0.1-SNAPSHOT.jar
 2017-06-10 13:03:06.208  INFO 15803 --- [           main] c.d.p.UserMicroserviceApplication        : Starting UserMicroserviceApplication v0.0.1-SNAPSHOT on C02T41V3G8WL with PID 15803 (~/code_p/gatling/micro-services/ecommerce-microservices/user-microservice/target/user-microservice-0.0.1-SNAPSHOT.jar started by user in ~/code_p/gatling/micro-services/ecommerce-microservices/user-microservice)
 2017-06-10 13:03:06.250  INFO 15803 --- [           main] s.c.a.AnnotationConfigApplicationContext : Refreshing org.springframework.context.annotation.AnnotationConfigApplicationContext@5415e2a7: startup date [Sat Jun 10 13:03:06 IST 2017]; root of context hierarchy
@@ -73,7 +74,7 @@ Tests run: 1, Failures: 0, Errors: 0, Skipped: 0
 2017-06-10 13:03:07.715  INFO 15803 --- [           main] o.s.b.f.s.DefaultListableBeanFactory     : Overriding bean definition for bean 'beanNameViewResolver': replacing [Root bean: class [null]; scope=; abstract=false; lazyInit=false; autowireMode=3; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=org.springframework.boot.autoconfigure.web.ErrorMvcAutoConfiguration$WhitelabelErrorViewConfiguration; factoryMethodName=beanNameViewResolver; initMethodName=null; destroyMethodName=(inferred); defined in class path resource [org/springframework/boot/autoconfigure/web/ErrorMvcAutoConfiguration$WhitelabelErrorViewConfiguration.class]] with [Root bean: class [null]; scope=; abstract=false; lazyInit=false; autowireMode=3; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=org.springframework.boot.autoconfigure.web.WebMvcAutoConfiguration$WebMvcAutoConfigurationAdapter; factoryMethodName=beanNameViewResolver; initMethodName=null; destroyMethodName=(inferred); defined in class path resource [org/springframework/boot/autoconfigure/web/WebMvcAutoConfiguration$WebMvcAutoConfigurationAdapter.class]]
 2017-06-10 13:03:08.088  INFO 15803 --- [           main] o.s.b.f.s.DefaultListableBeanFactory     : Overriding bean definition for bean 'infoEndpoint': replacing [Root bean: class [null]; scope=; abstract=false; lazyInit=false; autowireMode=3; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=org.springframework.boot.actuate.autoconfigure.EndpointAutoConfiguration; factoryMethodName=infoEndpoint; initMethodName=null; destroyMethodName=(inferred); defined in class path resource [org/springframework/boot/actuate/autoconfigure/EndpointAutoConfiguration.class]] with [Root bean: class [null]; scope=; abstract=false; lazyInit=false; autowireMode=3; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=org.springframework.cloud.autoconfigure.RefreshAutoConfiguration$InfoEndpointRebinderConfiguration; factoryMethodName=infoEndpoint; initMethodName=null; destroyMethodName=(inferred); defined in class path resource [org/springframework/cloud/autoconfigure/RefreshAutoConfiguration$InfoEndpointRebinderConfiguration.class]]
 2017-06-10 13:03:08.453  INFO 15803 --- [           main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=c76cd8dd-6d6e-385d-be7c-6409189721f0
-
+```
 
 
 
@@ -84,12 +85,12 @@ Tests run: 1, Failures: 0, Errors: 0, Skipped: 0
 ************************************************************************
 ************************************************************************
 ************************************************************************/
-
+```
 {Sat 10 Jun 14:44} -  ~/code_p/gatling/micro-services/tests/user-microservice-gatling-tests   master ●  mvn clean gatling:execute
+```
 
 
-
-
+```
 Installing Influxdb
 {Sat 10 Jun 13:24} -  ~/code_p/gatling/micro-services   master ●  brew install influxdb
 Updating Homebrew...
@@ -109,6 +110,8 @@ Or, if you don't want/need a background service you can just run:
 ==> Summary
 🍺  /usr/local/Cellar/influxdb/1.2.4: 8 files, 44.2MB
 {Sat 10 Jun 17:18} -  ~/code_p/gatling/micro-services   master ● 
+```
+
 
 ********* GATLING --> INFLUXDB --> GRAFANA  *************
 
@@ -125,7 +128,7 @@ The sections below describe how to configure Gatling with InfluxDB and Graphite,
 ********* GATLING.conf  *************
 In the gatling.conf add “graphite” to the data writers and specify the host of the Carbon or InfluxDB server.
 ~/code_p/gatling/micro-services/tests/user-microservice-gatling-tests/src/test/resources/gatling.conf
-
+```
 data {
   writers = [console, file, graphite]
 }
@@ -134,8 +137,9 @@ graphite {
   host = "192.0.2.235"  # InfluxDB or Carbon server
   # writeInterval = 1   # Default write interval of one second
 }
-
-new fomat
+```
+new format
+```
  data {
   writers = "console, file, graphite"
   graphite {
@@ -143,6 +147,8 @@ new fomat
   # writeInterval = 1   # Default write interval of one second
   }
 }
+```
+
 
 ********* INFLUXDB  *************
 InfluxDB
@@ -155,7 +161,7 @@ Install InfluxDB through your package manager.
 Graphite plugin
 
 Add the below to the Graphite section of /etc/influxdb/influxdb.conf or /usr/local/etc/influxdb.conf
-
+```
 [[graphite]]
         enabled = true
         database = "gatlingdb"
@@ -163,14 +169,18 @@ Add the below to the Graphite section of /etc/influxdb/influxdb.conf or /usr/loc
         templates = [
                 "gatling.*.*.*.* measurement.simulation.request.status.field",
                 "gatling.*.users.*.* measurement.simulation.measurement.request.field"
-        ]
-
+     ]
+```
 
 ********* START INFLUXDB using the config file  *************
+```
 influxd -config /usr/local/etc/influxdb.conf
+```
 
 ********* START GRAFANA  *************
+```
 grafana-server --config=/usr/local/etc/grafana/grafana.ini --homepath /usr/local/share/grafana cfg:default.paths.logs=/usr/local/var/log/grafana cfg:default.paths.data=/usr/local/var/lib/grafana cfg:default.paths.plugins=/usr/local/var/lib/grafana/plugins
+```
 
 Grafana URL - http://;ocalhost:3000
 admin/admin
